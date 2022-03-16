@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 16:22:38 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/03/16 17:26:12 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/03/16 17:29:46 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,14 @@ void
 	{
 		if (level == lvl[i])
 		{
-			(this->*(lvl_func[i].f))();
+			switch(i) {
+				case 0: this->_debug();
+				case 1: this->_info();
+				case 2: this->_warning();
+				case 3: this->_error();
+			}
 			return;
+			
 		}
 	}
 	std::cout << "INVALID LEVEL" << std::endl;
