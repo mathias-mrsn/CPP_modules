@@ -6,9 +6,12 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 11:09:07 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/03/16 12:57:03 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/03/16 13:25:54 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
 #include <iostream>
 
@@ -30,3 +33,5 @@ class Zombie {
 };
 
 Zombie*		zombieHorde(int, std::string name);
+
+#endif
