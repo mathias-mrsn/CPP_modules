@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/16 14:59:29 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/03/16 15:54:12 by mamaurai         ###   ########.fr       */
+/*   Created: 2022/03/16 16:40:58 by mamaurai          #+#    #+#             */
+/*   Updated: 2022/03/16 16:43:44 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanB.hpp"
+#include "Karen.hpp"
 
-HumanB::HumanB (std::string name) : _name(name) {
-	return;
-}
+int
+	main(int ac, char **av)
+{
+	Karen	karen;
 
-HumanB::~HumanB (void) {
-	return;
-}
-
-void 
-	HumanB::attack(void) const {
-
-	std::cout	<< this->_name
-				<< " attacks with their "
-				<< this->_weapon->getType()
-				<< std::endl;
-}
-
-void
-	HumanB::setWeapon(Weapon &weapon) {
-
-	this->_weapon = &weapon;
-	return ;		
+	karen.complain("invalid");
+	karen.complain("DEBUG");
+	karen.complain("INFO");
+	karen.complain("WARNING");
+	karen.complain("ERROR");
+	karen.complain("error");
+	
+	return (EXIT_SUCCESS);
 }

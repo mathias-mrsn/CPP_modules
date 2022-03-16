@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/16 14:59:29 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/03/16 15:54:12 by mamaurai         ###   ########.fr       */
+/*   Created: 2022/03/16 16:19:25 by mamaurai          #+#    #+#             */
+/*   Updated: 2022/03/16 16:32:27 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanB.hpp"
+#ifndef KAREN_H
+#define KAREN_H
 
-HumanB::HumanB (std::string name) : _name(name) {
-	return;
-}
+#include <iostream>
 
-HumanB::~HumanB (void) {
-	return;
-}
+class Karen {
+	private:
+		void	_debug (void);
+		void	_info (void);
+		void	_warning (void);
+		void	_error (void);
+	public:
+		Karen (void);
+		~Karen (void);
+		
+		void	complain (std::string);
+};
 
-void 
-	HumanB::attack(void) const {
+typedef struct	s_level {
+	void	(Karen::*f) (void);
+}t_level;
 
-	std::cout	<< this->_name
-				<< " attacks with their "
-				<< this->_weapon->getType()
-				<< std::endl;
-}
-
-void
-	HumanB::setWeapon(Weapon &weapon) {
-
-	this->_weapon = &weapon;
-	return ;		
-}
+#endif
