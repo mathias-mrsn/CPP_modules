@@ -6,23 +6,23 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 16:40:58 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/03/16 16:43:44 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/03/31 15:55:13 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Karen.hpp"
+#include "Harl.hpp"
 
 int
 	main(int ac, char **av)
 {
-	Karen	karen;
+	Harl	Harl;
 
-	karen.complain("invalid");
-	karen.complain("DEBUG");
-	karen.complain("INFO");
-	karen.complain("WARNING");
-	karen.complain("ERROR");
-	karen.complain("error");
+	Harl.complain("invalid");
+	Harl.complain("DEBUG");
+	Harl.complain("INFO");
+	Harl.complain("WARNING");
+	Harl.complain("ERROR");
+	Harl.complain("error");
 	
 	return (EXIT_SUCCESS);
 }

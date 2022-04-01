@@ -6,14 +6,14 @@
 #    By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 16:19:05 by mamaurai          #+#    #+#              #
-#    Updated: 2022/03/16 16:19:19 by mamaurai         ###   ########.fr        #
+#    Updated: 2022/03/31 15:55:13 by mamaurai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 		karen
+NAME = 		Harl
 
 SRCS =		main.cpp \
-			Karen.cpp
+			Harl.cpp
 			
 CC =		clang++
 CPPFLAGS = 	-Wall -Wextra -Werror -std=c++98
