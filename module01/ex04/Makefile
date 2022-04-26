@@ -6,7 +6,7 @@
 #    By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 15:55:47 by mamaurai          #+#    #+#              #
-#    Updated: 2022/03/16 15:55:54 by mamaurai         ###   ########.fr        #
+#    Updated: 2022/04/26 14:21:51 by mamaurai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,6 @@ CC =		clang++
 CPPFLAGS = 	-Wall -Wextra -Werror -std=c++98
 OBJS = 		${SRCS:.cpp=.o}
 RM =		rm -f
-INCS =		-I .
 SYSTEM =	${shell uname}
 
 ifeq (${SYSTEM}, Darwin)

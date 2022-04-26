@@ -6,48 +6,76 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 15:56:01 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/03/16 16:17:48 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/04/26 14:39:25 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
-#include <cstring>
 #include <iosfwd>
+#include <cstring>
 
 int
-	main(int ac, char **av)
+main
+(int ac, char **av)
 {
-	if (ac != 4)
+	if (ac != 4 || std::strlen(av[1]) == 0 || std::strlen(av[2]) == 0 || std::strlen(av[3]) == 0)
 	{
 		std::cout << "./sed \"filename\" \"string_to_find\" \"string_to_replace\"" << std::endl;
 		return (EXIT_FAILURE);
 	}
+
 	std::string		filename = av[1];
 	std::string		repl_file = filename.append(".replace");
-	std::ofstream	ofs(repl_file);
-	std::ifstream	ifs(filename);
+	std::string		str_to_replace = av[3];
 
+	std::ifstream	ifs;
+	ifs.open(av[1]);
+	if (ifs.fail())
+	{
+		std::cout << "error: cannot open " << av[1] << std::endl;
+		return (EXIT_FAILURE);
+	}
+
+	std::ofstream	ofs;
+	ofs.open(repl_file);
+	if (ofs.fail())
+	{
+		std::cout << "error: cannot create " << repl_file << std::endl;
+		ifs.close();
+		return (EXIT_FAILURE);
+	}
+	
 	std::string		buffer;
+	
 	while (true)
 	{
-		getline(buffer, ifs);
+		std::getline(ifs, buffer);
 		while (true)
 		{
-			size_t	find_res buffer.find(av[2]);
+			size_t	find_res = buffer.find(av[2]);
 			
-			if (find_res == buffer.size())
+			if (find_res == std::string::npos)
 			{
 				ofs << buffer;
+				std::cout << "here";
 				break;
 			}
 			else
 			{
 				ofs << buffer.substr(0, find_res);
-				buffer = buffer.substr(find_res + av[2].size());
+				ofs << str_to_replace;
+				buffer = buffer.substr(find_res + str_to_replace.size());
 			}
 		}
+		if (ifs.eof())
+			break;
+		ofs << std::endl;
 	}
+
+	ofs.close();
+	ifs.close();
+	
 	return (0);
 	
 }
