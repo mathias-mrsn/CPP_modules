@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 15:56:01 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/04/26 14:39:25 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/04/27 09:33:42 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ main
 			if (find_res == std::string::npos)
 			{
 				ofs << buffer;
-				std::cout << "here";
 				break;
 			}
 			else

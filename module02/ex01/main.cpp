@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/17 18:11:56 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/04/01 09:17:03 by mamaurai         ###   ########.fr       */
+/*   Created: 2022/04/27 10:26:40 by mamaurai          #+#    #+#             */
+/*   Updated: 2022/04/27 13:12:02 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 #include "Fixed.hpp"
 
-int
-main( void ) {
-
+int main( void ) {
+	
 	Fixed a;
 	Fixed const b( 10 );
 	Fixed const c( 42.42f );
@@ -31,5 +31,7 @@ main( void ) {
 	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
 	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
 	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+
 	return 0;
+
 }

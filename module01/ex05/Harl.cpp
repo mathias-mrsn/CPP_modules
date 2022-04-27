@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 15:54:29 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/03/31 15:55:13 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/04/27 09:42:28 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void
 
 	t_level	lvl_func[4] = {&Harl::_debug, &Harl::_info, &Harl::_warning, &Harl::_error};
 	std::string				lvl[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	void	(Harl::*f)	();
+
 
 	for (int i = 0; i < 4; i++)
 	{
@@ -35,6 +35,7 @@ void
 			return;
 		}
 	}
+
 	std::cout << "INVALID LEVEL" << std::endl;
 }
 

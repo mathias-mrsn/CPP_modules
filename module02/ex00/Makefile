@@ -1,20 +1,8 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/03/17 18:11:13 by mamaurai          #+#    #+#              #
-#    Updated: 2022/03/17 18:11:31 by mamaurai         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-NAME = 		first_canon
+NAME = 		canon_class
 
 SRCS =		main.cpp \
 			Fixed.cpp
-
+			
 CC =		clang++
 CPPFLAGS = 	-Wall -Wextra -Werror -std=c++98
 OBJS = 		${SRCS:.cpp=.o}
@@ -57,7 +45,7 @@ ${NAME}:	${OBJS}
 				@printf "%-15s ${_PURPLE}${_BOLD}${NAME}${_END}...\n" "Compiling"
 				@${CC} ${CPPFLAGS} -o ${NAME} ${INCS} ${OBJS}
 				@printf "\n${_GREEN}${_BOLD}Compilation done !${_END}\n"
-
+				
 all:		${NAME}
 
 clean:
@@ -67,7 +55,7 @@ clean:
 fclean:		clean
 				@printf "%-15s ${_RED}${_BOLD}${NAME}${_END}...\n" "Deleting"
 				@${RM} ${NAME}
-
+	
 re:			fclean all
 
-.PHONY:	all clean fclean re%
+.PHONY:	all clean fclean re%   
