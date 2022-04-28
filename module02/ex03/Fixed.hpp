@@ -6,9 +6,12 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 10:29:22 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/04/28 18:14:47 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/04/28 18:40:33 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
 #include <iostream>
 #include <cmath>
@@ -53,3 +56,5 @@ class Fixed {
 };
 
 std::ostream&	operator<<(std::ostream&, const Fixed&);
+
+#endif
