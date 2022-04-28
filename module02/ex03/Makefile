@@ -2,6 +2,7 @@ NAME = 		bsp
 
 SRCS =		main.cpp \
 			Fixed.cpp \
+			Point.cpp \
 			bsp.cpp
 			
 CC =		clang++

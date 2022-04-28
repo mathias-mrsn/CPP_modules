@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 18:52:00 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/04/28 18:56:47 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/04/28 19:22:21 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ Point::Point (const Point& cpy) {*this = cpy;}
 
 Point& Point::operator=(const Point& cpy)
 {
-	Fixed tmp1(this->_x);
-	Fixed tmp2(this->_y);
+	Fixed* x = (Fixed*)&this->_x;
+	Fixed* y = (Fixed*)&this->_y;
 
 	if (&cpy == this) { return *this;}
-	this->_x = tmp1;
-	this->_y = tmp2;
+	*x = cpy._x;
+	*y = cpy._y;
 	
-	
+	return (*this);
 }
 
 float	Point::getXFloat (void) {return (this->_x.toFloat());}

@@ -6,9 +6,12 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 10:29:22 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/04/27 10:54:55 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/04/28 19:36:22 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
 #include <iostream>
 
@@ -27,3 +30,5 @@ class Fixed {
 		void	setRawBits(const int);
 		
 };
+
+#endif
