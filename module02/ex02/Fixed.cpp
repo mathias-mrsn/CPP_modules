@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 10:34:08 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/04/28 18:24:26 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/04/29 11:45:10 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ int		Fixed::operator<=(const Fixed& n) {return (this->getRawBits() <= n.getRawBi
 int		Fixed::operator==(const Fixed& n) {return (this->getRawBits() == n.getRawBits());}
 int		Fixed::operator!=(const Fixed& n) {return (this->getRawBits() != n.getRawBits());}
 
-Fixed	Fixed::operator+(const Fixed& cpy) {return (Fixed(this->getRawBits() + cpy.getRawBits()));}
-Fixed	Fixed::operator-(const Fixed& cpy) {return (Fixed(this->getRawBits() - cpy.getRawBits()));}
+Fixed	Fixed::operator+(const Fixed& cpy) {return (Fixed(this->toFloat() + cpy.toFloat()));}
+Fixed	Fixed::operator-(const Fixed& cpy) {return (Fixed(this->toFloat() - cpy.toFloat()));}
 Fixed	Fixed::operator*(const Fixed& cpy) {return (Fixed(this->toFloat() * cpy.toFloat()));}
-Fixed	Fixed::operator/(const Fixed& cpy) {return (Fixed(this->getRawBits() / cpy.getRawBits()));}
+Fixed	Fixed::operator/(const Fixed& cpy) {return (Fixed(this->toFloat() / cpy.toFloat()));}
 
 Fixed	Fixed::operator++(void)
 {
