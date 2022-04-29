@@ -6,14 +6,14 @@
 #    By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/03 18:55:01 by mamaurai          #+#    #+#              #
-#    Updated: 2022/04/03 18:55:02 by mamaurai         ###   ########.fr        #
+#    Updated: 2022/04/29 13:43:37 by mamaurai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 		canon_with_operations
+NAME = 		claptrap
 
 SRCS =		main.cpp \
-			Fixed.cpp
+			ClapTrap.cpp
 
 CC =		clang++
 CPPFLAGS = 	-Wall -Wextra -Werror -std=c++98
