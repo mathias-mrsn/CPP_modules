@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/30 16:19:32 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/04/30 16:20:13 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/04/30 16:53:38 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
 	public: 
 		FragTrap (void);
