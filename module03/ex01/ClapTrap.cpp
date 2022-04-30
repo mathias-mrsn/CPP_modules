@@ -6,22 +6,29 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 19:01:19 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/04/30 14:55:35 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/04/30 15:14:34 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-# if !defined(CPP_DEBUG)
-# define CPP_DEBUG 1
-# endif
-
-ClapTrap::ClapTrap (void) : _name("UNKNOWN"),
-							_hit_point(10),
-							_energy_point(10),
-							_attack_damage(0) 
+ClapTrap::ClapTrap (void) :
+	_name("UNKNOWN"),
+	_hit_point(10),
+	_energy_point(10),
+	_attack_damage(0) 
 {
 	if (CPP_DEBUG) {std::cout << "ClapTrap default constructor called" << std::endl;}
+	return ;
+}
+
+ClapTrap::ClapTrap (const std::string& name, const int hp, const int ep, const int ad) :
+	_name(name),
+	_hit_point(hp),
+	_energy_point(ep),
+	_attack_damage(ad) 
+{
+	if (CPP_DEBUG) {std::cout << "ClapTrap complete constructor called" << std::endl;}
 	return ;
 }
 
@@ -31,10 +38,11 @@ ClapTrap::~ClapTrap (void)
 	return ;
 }
 
-ClapTrap::ClapTrap (const std::string& name) : 	_name((std::string&)name),
-												_hit_point(10),
-												_energy_point(10),
-												_attack_damage(0) 
+ClapTrap::ClapTrap (const std::string& name) : 
+	_name((std::string&)name),
+	_hit_point(10),
+	_energy_point(10),
+	_attack_damage(0) 
 {
 	if (CPP_DEBUG) {std::cout << "ClapTrap string constructor called" << std::endl;}
 	return ;
@@ -48,6 +56,9 @@ ClapTrap::ClapTrap (const ClapTrap& ref)
 
 ClapTrap&	ClapTrap::operator=(const ClapTrap& ref)
 {
+	if (this == &ref) {return *this;}
+
+
 	this->_name = ref._name;
 	this->_hit_point = ref._hit_point;
 	this->_energy_point = ref._energy_point;
@@ -74,7 +85,7 @@ ClapTrap::attack (const std::string& target)
 		std::cout << "ClapTrap " << this->getName() << " is dead!" << std::endl;
 	else
 	{
-		std::cout << "Claptrap "	<< this->getName()
+		std::cout << "ClapTrap "	<< this->getName()
 									<< " attacks "
 									<< target
 									<< ", causing "

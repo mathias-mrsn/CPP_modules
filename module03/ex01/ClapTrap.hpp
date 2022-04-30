@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 18:55:51 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/04/30 14:51:01 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/04/30 15:06:17 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,22 @@
 
 #include <iostream>
 
+# if !defined(CPP_DEBUG)
+# define CPP_DEBUG 1
+# endif
+
 class ClapTrap
 {
-	private:
+	protected:
 		std::string			_name;	
 		int					_hit_point;
 		int					_energy_point;
 		int					_attack_damage;
-		
+
 	public:
 		ClapTrap (void);
 		ClapTrap (const std::string &);
+		ClapTrap (const std::string &, const int, const int, const int);
 		ClapTrap (const ClapTrap&);
 		~ClapTrap (void);
 
