@@ -5,22 +5,23 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/04/03 18:55:01 by mamaurai          #+#    #+#              #
-#    Updated: 2022/05/01 10:12:34 by mamaurai         ###   ########.fr        #
+#    Created: 2022/05/01 10:03:24 by mamaurai          #+#    #+#              #
+#    Updated: 2022/05/01 11:29:34 by mamaurai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 		diamond
+NAME = 		polymorphism
 
 SRCS =		main.cpp \
-			ClapTrap.cpp \
-			ScavTrap.cpp \
-			FragTrap.cpp \
-			DiamondTrap.cpp
-			
+			Animal.cpp \
+			Cat.cpp \
+			Dog.cpp \
+			WrongAnimal.cpp \
+			WrongCat.cpp
+
 
 CC =		clang++
-CPPFLAGS = 	-Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
+CPPFLAGS = 	-Wall -Wextra -Werror -std=c++98
 OBJS = 		${SRCS:.cpp=.o}
 RM =		rm -f
 INCS =		-I .
@@ -74,4 +75,4 @@ fclean:		clean
 
 re:			fclean all
 
-.PHONY:	all clean fclean re
+.PHONY:	all clean fclean re%
