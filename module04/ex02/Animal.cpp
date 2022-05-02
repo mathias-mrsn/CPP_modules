@@ -1,48 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/01 11:25:43 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/01 11:25:46 by mamaurai         ###   ########.fr       */
+/*   Created: 2022/05/01 10:18:51 by mamaurai          #+#    #+#             */
+/*   Updated: 2022/05/01 10:36:13 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongAnimal.hpp"
+#include "Animal.hpp"
 
 /* CONSTRUCTORS - DESTRUCTORS */
 
-WrongAnimal::WrongAnimal (void) : _type("UNKNOWN")
+Animal::Animal (void) : _type("UNKNOWN")
 {
-	if (CPP_DEBUG) {std::cout << "WrongAnimal default constructor called" << std::endl;}
+	if (CPP_DEBUG) {std::cout << "Animal default constructor called" << std::endl;}
 	return;
 }
 
-WrongAnimal::WrongAnimal (std::string type) : _type(type)
+Animal::Animal (std::string type) : _type(type)
 {
-	if (CPP_DEBUG) {std::cout << "WrongAnimal string constructor called" << std::endl;}
+	if (CPP_DEBUG) {std::cout << "Animal string constructor called" << std::endl;}
 	return;
 }
 
-WrongAnimal::WrongAnimal (const WrongAnimal& ref)
+Animal::Animal (const Animal& ref)
 {
-	if (CPP_DEBUG) {std::cout << "WrongAnimal copy constructor called" << std::endl;}
+	if (CPP_DEBUG) {std::cout << "Animal copy constructor called" << std::endl;}
 	*this = ref;
 }
 
-WrongAnimal::~WrongAnimal (void)
+Animal::~Animal (void)
 {
-	if (CPP_DEBUG) {std::cout << "WrongAnimal default destructor called" << std::endl;}
+	if (CPP_DEBUG) {std::cout << "Animal default destructor called" << std::endl;}
 	return;
 }
 
 /* OPERATORS OVERLOAD */
 
-WrongAnimal&
-WrongAnimal::operator=
-(const WrongAnimal& ref)
+Animal&
+Animal::operator=
+(const Animal& ref)
 {
 	if (this == &ref) {return *this;}
 	
@@ -53,22 +53,23 @@ WrongAnimal::operator=
 /* MEMBER FUNCTIONS */
 
 void
-WrongAnimal::makeSound
+Animal::makeSound
 (void) const
 {
-	std::cout << "WrongAnimal make sound" << std::endl;
+	std::cout << "Animal make sound" << std::endl;
 }
 
 std::string
-WrongAnimal::getType
+Animal::getType
 (void) const
 {
 	return (this->_type);
 }
 
 void
-WrongAnimal::setType
+Animal::setType
 (std::string type)
 {
 	this->_type = type;
 }
+

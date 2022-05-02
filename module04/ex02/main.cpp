@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 10:50:22 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/02 09:55:23 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/02 09:58:35 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@
 int	main(void)
 {
 	Animal* tab[NBR_ANIMAL];
+
+	// Animal test;
+	// error because Animal cannot create a instance
 
 	for (int i = 0; i < NBR_ANIMAL; i++)
 	{
