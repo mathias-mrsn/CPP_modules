@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 10:26:40 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/04/29 10:09:54 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/02 14:21:53 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(void) {
 
 	Point* tests = new Point[5];
 
-	tests[0] = Point(3, 5);
+	tests[0] = Point(0, 0);
 	tests[1] = Point(10, 6);
 	tests[2] = Point(4, 18);
 	tests[3] = Point(9, 11);

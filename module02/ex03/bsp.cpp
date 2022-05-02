@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 18:31:10 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/04/28 19:32:13 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/02 14:29:31 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ bsp(Point const a, Point const b, Point const c, Point const point)
 	d2 = sign(point, b, c);
 	d3 = sign(point, c, a);
 
-	neg = (d1 < 0) || (d2 < 0) || (d3 < 0);
-    pos = (d1 > 0) || (d2 > 0) || (d3 > 0);
+	neg = (d1 <= 0) || (d2 <= 0) || (d3 <= 0);
+    pos = (d1 >= 0) || (d2 >= 0) || (d3 >= 0);
 
     return !(neg && pos);
 }
