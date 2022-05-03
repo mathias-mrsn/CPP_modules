@@ -6,7 +6,7 @@
 #    By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/01 10:03:24 by mamaurai          #+#    #+#              #
-#    Updated: 2022/05/01 11:29:34 by mamaurai         ###   ########.fr        #
+#    Updated: 2022/05/03 09:56:21 by mamaurai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,4 +75,4 @@ fclean:		clean
 
 re:			fclean all
 
-.PHONY:	all clean fclean re%
+.PHONY:	all clean fclean re

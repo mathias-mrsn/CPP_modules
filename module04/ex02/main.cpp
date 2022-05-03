@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 10:50:22 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/02 09:58:35 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/03 09:51:54 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,30 +18,9 @@
 
 int	main(void)
 {
-	Animal* tab[NBR_ANIMAL];
-
-	// Animal test;
+	// Animal animal;
 	// error because Animal cannot create a instance
-
-	for (int i = 0; i < NBR_ANIMAL; i++)
-	{
-		if ((i % 2) == 0)
-			tab[i] = new Dog();
-		else
-			tab[i] = new Cat();
-	}
-
-	std::cout << std::endl;
-
-	for (int i = 0; i < NBR_ANIMAL; i++)
-		std::cout << "This animal is a " << tab[i]->getType() << "." << std::endl;
-
-	std::cout << std::endl;
-
-	for (int i = 0; i < NBR_ANIMAL; i++)
-		delete (tab[i]);
-
-	std::cout << std::endl;
+	
 
 	Animal* cat = new Cat();
 	std::string s1 = "miouaaa";
