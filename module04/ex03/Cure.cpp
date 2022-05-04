@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 11:27:23 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/03 14:33:16 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/04 12:45:25 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Cure::clone (void) const
 void
 Cure::use (ICharacter& target)
 {
-	std::cout << "* heals " << "[...]" << "’s wounds *" << std::endl;
+	std::cout << "* heals " << target.getName() << "’s wounds *" << std::endl;
 }
 
 

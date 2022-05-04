@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 10:09:58 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/03 15:14:32 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/04 11:43:08 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 # define CHARACTER_HPP
 
 #include <iostream>
-#include "ICharacter.hpp"
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 
 # define NBR_MATERIA 4
 
 class Character : public ICharacter
 {
 	private:
-		std::string&	_name;
+		std::string		_name;
 		AMateria*		_tab[NBR_MATERIA]; 
 	public:
 		Character (void);
 		Character (const Character&);
 		Character (const std::string);
-		virtual ~Character() {}
+		virtual ~Character(void);
 
 		Character&	 operator=(const Character&);
 		

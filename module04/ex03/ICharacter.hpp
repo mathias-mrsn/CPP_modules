@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 10:00:19 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/03 10:01:53 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/04 11:37:53 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define ICHARACTER_HPP
 
 #include <iostream>
+
+class AMateria;
 
 class ICharacter
 {

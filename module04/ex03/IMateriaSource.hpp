@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 10:05:40 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/03 10:06:35 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/04 10:55:15 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define IMATERIASOURCE_HPP
 
 #include <iostream>
+#include "AMateria.hpp"
 
 class IMateriaSource
 {
