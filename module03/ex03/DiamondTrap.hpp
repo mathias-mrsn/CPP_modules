@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/30 16:30:10 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/04/30 17:19:13 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/05 13:03:18 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class DiamondTrap : public ScavTrap, public FragTrap
 {
 	private:
-		std::string 		name;
+		std::string		name;
 	public:
 		DiamondTrap (void);
 		DiamondTrap (const DiamondTrap&);

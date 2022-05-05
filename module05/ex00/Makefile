@@ -5,22 +5,19 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/04/03 18:55:01 by mamaurai          #+#    #+#              #
-#    Updated: 2022/05/05 13:09:38 by mamaurai         ###   ########.fr        #
+#    Created: 2022/05/04 14:23:07 by mamaurai          #+#    #+#              #
+#    Updated: 2022/05/04 14:39:11 by mamaurai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 		diamond
+NAME = 		bureaucrat
 
 SRCS =		main.cpp \
-			ClapTrap.cpp \
-			ScavTrap.cpp \
-			FragTrap.cpp \
-			DiamondTrap.cpp
-			
+			Bureaucrat.cpp
+
 
 CC =		clang++
-CPPFLAGS = 	-Wall -Wextra -Werror -MMD -Wshadow -Wno-shadow -std=c++98
+CPPFLAGS = 	-Wall -Wextra -Werror -std=c++98 -fsanitize=address -g3
 OBJS = 		${SRCS:.cpp=.o}
 RM =		rm -f
 INCS =		-I .

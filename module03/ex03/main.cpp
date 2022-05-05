@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 19:21:04 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/04/30 17:18:01 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/05 12:57:28 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,80 +17,64 @@
 
 int	main(void)
 {
-	std::cout << "------------ClapTrap Test------------" << std::endl << std::endl;
+	std::cout << "\tClapTrap Tests" << std::endl << std::endl ;
 
-	ClapTrap		*joj = new ClapTrap("joj");
-
-	std::cout << std::endl;
-
-	joj->attack("joblux");
-	joj->attack("joblux");
-	joj->attack("joblux");
-	joj->attack("joblux");
-	joj->attack("joblux");
-	joj->attack("joblux");
-
-	joj->takeDamage(10);
-	joj->takeDamage(10);
-	joj->beRepaired(10);
-	joj->takeDamage(5);
-
-	std::cout << std::endl;
-	delete joj;
-	std::cout << std::endl;
-
-	std::cout << "------------ScavTrap Test------------" << std::endl << std::endl;
-
-	ScavTrap		*joblux = new ScavTrap("joblux");
+	ClapTrap		*clap = new ClapTrap("John");
 
 	std::cout << std::endl;
 
-	joblux->attack("un type");
-
-	joblux->guardGate();
-
-	joblux->takeDamage(50);
-	joblux->takeDamage(50);
-	joblux->takeDamage(5);
+	clap->attack("UNKNOWN");
+	clap->beRepaired(10);
+	clap->takeDamage(100);
+	clap->beRepaired(1000);
 
 	std::cout << std::endl;
-	delete joblux;
-	std::cout << std::endl;
+	delete clap;
 
-	std::cout << "------------FragTrap Test------------" << std::endl << std::endl;
+	std::cout << std::endl << "\tScavTrap Tests" << std::endl << std::endl ;
 
-	FragTrap		*matheu = new FragTrap("matheu");
+	ScavTrap		*scav = new ScavTrap("Leo");
 
 	std::cout << std::endl;
 
-	matheu->attack("un type");
-
-	matheu->highFivesGuys();
-
-	matheu->takeDamage(50);
-	matheu->takeDamage(50);
-	matheu->takeDamage(5);
-
+	scav->attack("John");
+	scav->takeDamage(10);
+	scav->takeDamage(50);
+	scav->beRepaired(5);
+	scav->guardGate();
 
 	std::cout << std::endl;
-	delete matheu;
-	std::cout << std::endl;
+	delete scav;
 
-	std::cout << "------------DiamondTrap Test------------" << std::endl << std::endl ;
+	std::cout << std::endl << "\tFragTrap Tests" << std::endl << std::endl ;
 
-	DiamondTrap		*monster = new DiamondTrap("monster");
+
+	FragTrap		*frag = new FragTrap("Ken");
 
 	std::cout << std::endl;
 
-	monster->whoAmI();
-	monster->attack("un autre monstre");
-	monster->takeDamage(50);
-	monster->takeDamage(50);
-	monster->takeDamage(50);
+	frag->attack("Leo");
+	frag->takeDamage(10);
+	frag->highFivesGuys();
+	frag->takeDamage(100);
 
 	std::cout << std::endl;
-	delete monster;
+	delete frag;
+
+	std::cout << std::endl << "\tDiamondTrap Tests" << std::endl << std::endl ;
+
+	DiamondTrap		*diamond = new DiamondTrap("Diam's");
+
 	std::cout << std::endl;
+
+	diamond->attack("Ken");
+	diamond->takeDamage(30);
+	diamond->takeDamage(30);
+	diamond->takeDamage(30);
+	diamond->whoAmI();
+
+	std::cout << std::endl;
+	delete diamond;
 
 	return (0);
 }
