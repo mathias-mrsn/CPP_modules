@@ -6,14 +6,12 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 17:12:47 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/05 17:41:54 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/05 22:03:35 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
-
-#include "Bureaucrat.hpp"
 
 #if !defined(CPP_DEBUG)
 # define CPP_DEBUG 1
@@ -40,13 +38,13 @@ class Bureaucrat
 		void			upperRank (int);
 		void			lowerRank (int);
 
-		class GradeTooHighException : std::exception
+		class GradeTooHighException : public std::exception
 		{
 			public:
 				virtual const char* what (void) const throw();	
 		};
 		
-		class GradeTooLowException : std::exception
+		class GradeTooLowException : public std::exception
 		{
 			public:
 				virtual const char* what (void) const throw();	
