@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 17:01:40 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/06 09:42:57 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/06 17:04:48 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,8 @@ Bureaucrat::upperRank (int i)
 {
 	if (this->_rank - i < 1)
 		throw (Bureaucrat::GradeTooHighException());
+	else if (this->_rank - i > 150)
+		throw (Bureaucrat::GradeTooLowException());
 	else
 		this->_rank -= i;
 }
@@ -83,10 +85,26 @@ Bureaucrat::upperRank (int i)
 void
 Bureaucrat::lowerRank (int i)
 {
-	if (this->_rank + i > 150)
+	if (this->_rank + i < 1)
+		throw (Bureaucrat::GradeTooHighException());
+	else if (this->_rank + i > 150)
 		throw (Bureaucrat::GradeTooLowException());
 	else
 		this->_rank += i;
+}
+
+void
+Bureaucrat::signForm (Form& form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << "ok";	
+	} 
+	catch (std::exception &e)
+	{
+		std::cout << "error: " << e.what() << std::endl;
+	}
 }
 
 std::ostream&
