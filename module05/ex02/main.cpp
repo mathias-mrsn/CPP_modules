@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 14:24:28 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/08 13:47:17 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/08 13:55:12 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int	main(void)
 		std::cout << e.what() << std::endl;
 	}
 
+	std::cout << std::endl;
 
 	try
 	{
@@ -49,6 +50,8 @@ int	main(void)
 		std::cout << e.what() << std::endl;
 	}
 
+	std::cout << std::endl;
+
 
 	try
 	{
@@ -61,6 +64,9 @@ int	main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
+
+	std::cout << std::endl;
+
 
 	bob.executeForm(PresidentialPardonForm("45GCD"));
 	phil.executeForm(PresidentialPardonForm("45GCD"));
