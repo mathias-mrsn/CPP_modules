@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 09:56:46 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/06 17:01:13 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/07 18:53:07 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,12 @@ Form::Form (std::string const name, int const rankToSign, int const rankToExec) 
 Form::Form (const Form& ref) : _rankToExec(1), _rankToSign(1)
 {
 	*this = ref;
+}
+
+Form::~Form (void)
+{
+	if (CPP_DEBUG) {std::cout << "Form default destructor called" << std::endl;}
+	return;	
 }
 
 Form&
@@ -72,13 +78,13 @@ Form::beSigned (const Bureaucrat& b)
 }
 
 const char*
-Form::GradeTooHighException::what (void) const
+Form::GradeTooHighException::what (void) const throw()
 {
 	return ("Grade to high!");
 }
 
 const char*
-Form::GradeTooLowException::what (void) const
+Form::GradeTooLowException::what (void) const throw()
 {
 	return ("Grade to low!");
 }
@@ -95,4 +101,5 @@ operator<< (std::ostream& o, const Form& form)
 		<< ", rank to exec : "
 		<< form.getRankToExec()
 		<< std::endl;
+	return (o);
 }
