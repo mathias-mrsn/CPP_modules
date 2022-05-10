@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 13:49:59 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/10 11:56:47 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/10 14:15:48 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 # define SCALAR_HPP
 
 #include <iostream>
+#include <iomanip>
 #include <limits.h>
+#include <stdio.h>
 #include <math.h>
 
 class Scalar

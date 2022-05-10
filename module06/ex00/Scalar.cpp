@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:07:28 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/10 11:57:24 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/10 14:17:31 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,6 @@ Scalar::operator=(const Scalar& ref)
 	return (*this);
 }
 
-
-
-
-
 void
 Scalar::printChar (void)
 {
@@ -83,6 +79,6 @@ Scalar::print (void)
 	std::cout << std::endl;
 	printInt();
 	std::cout << std::endl;
-	std::cout << "float : " << static_cast<float>(this->_d) << std::endl;
+	std::cout << "float : " << std::setiosflags(std::ios::fixed) << static_cast<float>(this->_d) << "f" << std::endl;
 	std::cout << "double : " << this->_d << std::endl;
 }
