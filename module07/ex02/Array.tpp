@@ -6,15 +6,12 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 15:35:40 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/10 17:30:05 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:36:31 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ARRAY_TPP
 # define ARRAY_TPP
-
-#include <iostream>
-#include <stdint.h>
 
 template<typename T>
 class Array

@@ -6,12 +6,12 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 17:21:24 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/10 17:25:54 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:36:21 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Array.tpp"
+#include "Array.hpp"
 #include <cstdlib>
 #include <ctime>
 
