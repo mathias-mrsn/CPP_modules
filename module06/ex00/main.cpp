@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 13:43:49 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/09 17:33:54 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/10 10:59:25 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ main (int ac, char **av)
 	Scalar *scalar = new Scalar(av[1]);
 	if (!scalar)
 		return (EXIT_FAILURE);
-	scalar->print();
+	delete scalar;
 	return (EXIT_SUCCESS);
 }

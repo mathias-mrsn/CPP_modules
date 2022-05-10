@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:07:28 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/09 17:55:06 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/10 11:57:24 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,17 @@ Scalar::Scalar (const std::string value)
 {
 	try
 	{
-		this->_type = foundRightType(value);
 		this->_d = std::stod(value);
+		this->print();
 	} catch (std::exception& e)
 	{
 		std::cerr << "Invalid argument" << std::endl;
 	}
+}
+
+Scalar::~Scalar (void)
+{
+	
 }
 
 Scalar&
@@ -45,52 +50,39 @@ Scalar::operator=(const Scalar& ref)
 
 
 
-bool
-isInteger (const std::string value)
+
+void
+Scalar::printChar (void)
 {
-	return (value.find_first_not_of("0123456789") == std::string::npos);
+	char c = static_cast<char>(this->_d);
+	
+	if (!std::isfinite(this->_d) || _d > CHAR_MAX || _d < CHAR_MIN)
+		std::cout << "char : impossible";
+	else if (!std::isprint(c))
+		std::cout << "char : non displayable";
+	else
+		std::cout << "char : " << c;
 }
 
-bool
-isDouble (const std::string value)
+void
+Scalar::printInt (void)
 {
-	return (1);
+	int c = static_cast<int>(this->_d);
+	
+	if (!std::isfinite(this->_d) || _d > INT_MAX || _d < INT_MIN)
+		std::cout << "int : impossible";
+	else
+		std::cout << "int : " << c;
 }
-
-bool
-isChar (const std::string value)
-{
-	return (1);
-}
-
-bool
-isDouble (const std::string value)
-{
-	return (1);
-}
-
-
 
 
 void
 Scalar::print (void)
 {
-	std::cout << this->_d << std::endl;
-}
-
-uint64_t
-Scalar::foundRightType (std::string type) const
-{
-	const t_type tab[6] = {{"-inff", MINUS_INFF}, {"inff", INFF}, {"-inf", MINUS_INF}, {"inf", INF}, {"nanf", NANF}, {"nan", NAN}};
-
-	for (uint64_t i = 0; i < 6; i++)
-	{
-		if (tab[i].type == type)
-		{
-			this->_type |= tab[i].value;
-			return;
-		}
-	}
-	
-	
+	printChar();
+	std::cout << std::endl;
+	printInt();
+	std::cout << std::endl;
+	std::cout << "float : " << static_cast<float>(this->_d) << std::endl;
+	std::cout << "double : " << this->_d << std::endl;
 }
