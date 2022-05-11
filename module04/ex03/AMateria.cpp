@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 10:12:47 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/11 11:42:44 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/11 13:22:22 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,22 @@
 int AMateria::_index = 0;
 AMateria* AMateria::_save[MAX_SIZE];
 
-AMateria::AMateria (void) : _type("none") {if (_index < MAX_SIZE) {_save[_index++] = this;}}
-AMateria::AMateria (std::string const & type) : _type(type) {if (_index < MAX_SIZE) {_save[_index++] = this;}}
-AMateria::AMateria (const AMateria& ref) {*this = ref; if (_index < MAX_SIZE) {_save[_index++] = this;}}
+AMateria::AMateria (void) : _type("none")
+{
+	if (_index < MAX_SIZE) {_save[_index++] = this;}
+}
+
+AMateria::AMateria (std::string const & type) : _type(type)
+{
+	if (_index < MAX_SIZE) {_save[_index++] = this;}
+}
+
+AMateria::AMateria (const AMateria& ref)
+{
+	*this = ref;
+	if (_index < MAX_SIZE) {_save[_index++] = this;}
+}
+
 AMateria::~AMateria (void) {}
 
 AMateria&

@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 09:50:53 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/11 11:09:12 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/11 13:37:08 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,8 @@ MateriaSource::createMateria (std::string const& type)
 {
 	for (int i = 0; i < NBR_MATERIA; i++)
 	{
-		if (this->_tab[i]->getType() == type)
-			return (this->_tab[i]->clone());
+		if (_tab[i] && _tab[i]->getType() == type)
+			return (_tab[i]->clone());
 	}
 	return (0);
 }

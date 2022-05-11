@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 10:50:22 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/03 09:51:54 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/09 15:54:53 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,6 @@
 
 int	main(void)
 {
-	// Animal animal;
-	// error because Animal cannot create a instance
-	
-
 	Animal* cat = new Cat();
 	std::string s1 = "miouaaa";
 	std::string s2 = "grrrrrr";

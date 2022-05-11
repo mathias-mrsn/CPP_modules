@@ -6,11 +6,11 @@
 #    By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/01 10:03:24 by mamaurai          #+#    #+#              #
-#    Updated: 2022/05/03 09:56:14 by mamaurai         ###   ########.fr        #
+#    Updated: 2022/05/11 14:11:06 by mamaurai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 		i_dont_want_to_burn_the_world
+NAME = 		abstract_class
 
 SRCS =		main.cpp \
 			Animal.cpp \

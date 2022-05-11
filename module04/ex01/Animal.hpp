@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 10:04:44 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/01 13:37:26 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/11 14:10:14 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define ANIMAL_HPP
 
 # if !defined(CPP_DEBUG)
-# define CPP_DEBUG 1
+# define CPP_DEBUG 0
 # endif
 
 #include <iostream>
