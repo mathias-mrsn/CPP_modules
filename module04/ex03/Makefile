@@ -6,11 +6,11 @@
 #    By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/04 09:58:32 by mamaurai          #+#    #+#              #
-#    Updated: 2022/05/04 12:47:48 by mamaurai         ###   ########.fr        #
+#    Updated: 2022/05/11 11:40:55 by mamaurai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 		test
+NAME = 		materia
 
 SRCS =		main.cpp \
 			AMateria.cpp \
@@ -21,7 +21,7 @@ SRCS =		main.cpp \
 
 
 CC =		clang++
-CPPFLAGS = 	-Wall -Wextra -Werror -std=c++98 -fsanitize=address -g3
+CPPFLAGS = 	-Wall -Wextra -Werror -std=c++98 
 OBJS = 		${SRCS:.cpp=.o}
 RM =		rm -f
 INCS =		-I .

@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 10:02:00 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/04 13:07:27 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/11 11:41:28 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ int main()
 	delete bob;
 	delete me;
 	delete src;
+
+	AMateria::clean();
 	return 0;
 }
