@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 12:55:43 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/08 13:33:15 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/13 11:20:08 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ PresidentialPardonForm::execute (Bureaucrat const & executor) const
 	if (executor.getRank() > this->getRankToExec())
 		throw AForm::GradeTooLowException();
 	else
-		std::cout << executor.getName() << "has been forgiven by President Zaphod Beeblebrox" << std::endl;
+		std::cout << executor.getName() << " has been forgiven by President Zaphod Beeblebrox" << std::endl;
 }
 
 PresidentialPardonForm&

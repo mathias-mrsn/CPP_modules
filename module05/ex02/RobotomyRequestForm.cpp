@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 13:10:05 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/08 13:56:21 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/13 11:20:05 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,11 @@ RobotomyRequestForm::execute (Bureaucrat const & executor) const
 
 		if (std::rand() % 2 == 0)
 		{
-			std::cout << executor.getName() << "has been robotomized with 50\% of success !" << std::endl;
+			std::cout << executor.getName() << " has been robotomized with 50\% of success !" << std::endl;
 		}
 		else
 		{
-			std::cout << "the robotization of " << executor.getName() << "has failed !" << std::endl;
+			std::cout << "the robotization of " << executor.getName() << " has failed !" << std::endl;
 		}
 	}
 }

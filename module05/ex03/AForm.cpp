@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 09:56:46 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/08 12:47:39 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/13 11:35:14 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ AForm::AForm (void) :
 	_isSigned(false),
 	_rankToExec(1),
 	_rankToSign(1)
-{
+{		
 	if (CPP_DEBUG) {std::cout << "AForm default constructor called" << std::endl;}
 	return;	
 }
@@ -28,6 +28,11 @@ AForm::AForm (std::string const name, int const rankToSign, int const rankToExec
 	_rankToExec(rankToExec),
 	_rankToSign(rankToSign)
 {
+	if (_rankToExec > 150 || _rankToSign > 150)
+		throw AForm::GradeTooLowException();
+	else if (_rankToExec < 1 || _rankToSign < 1)
+		throw AForm::GradeTooHighException();
+
 	if (CPP_DEBUG) {std::cout << "AForm complete constructor called" << std::endl;}
 	return;		
 }
@@ -71,7 +76,7 @@ AForm::getRankToSign (void) const {return (this->_rankToSign);}
 void
 AForm::beSigned (const Bureaucrat& b)
 {
-	if (b.getRank() < this->_rankToSign)
+	if (b.getRank() > this->_rankToSign)
 		throw AForm::GradeTooLowException();
 	else
 		this->_isSigned = true;

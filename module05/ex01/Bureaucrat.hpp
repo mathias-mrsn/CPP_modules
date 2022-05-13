@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 17:12:47 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/06 17:16:19 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/13 09:48:24 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define BUREAUCRAT_HPP
 
 #if !defined(CPP_DEBUG)
-# define CPP_DEBUG 1
+# define CPP_DEBUG 0
 # endif
 
 #include <iostream>

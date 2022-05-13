@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 13:10:17 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/08 13:58:21 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/13 12:59:26 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,6 @@ ShrubberyCreationForm::execute (Bureaucrat const & executor) const
 					<< std::endl;
 		ofs.close();
 	}
-		
-
 }
 
 ShrubberyCreationForm&

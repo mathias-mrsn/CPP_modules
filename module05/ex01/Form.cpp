@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 09:56:46 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/07 18:53:07 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/13 11:11:45 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,11 @@ Form::Form (std::string const name, int const rankToSign, int const rankToExec) 
 	_rankToExec(rankToExec),
 	_rankToSign(rankToSign)
 {
+	if (_rankToExec > 150 || _rankToSign > 150)
+		throw Form::GradeTooLowException();
+	else if (_rankToExec < 1 || _rankToSign < 1)
+		throw Form::GradeTooHighException();
+
 	if (CPP_DEBUG) {std::cout << "Form complete constructor called" << std::endl;}
 	return;		
 }
@@ -71,7 +76,7 @@ Form::getRankToSign (void) const {return (this->_rankToSign);}
 void
 Form::beSigned (const Bureaucrat& b)
 {
-	if (b.getRank() < this->_rankToSign)
+	if (b.getRank() > this->_rankToSign)
 		throw Form::GradeTooLowException();
 	else
 		this->_isSigned = true;
@@ -99,7 +104,6 @@ operator<< (std::ostream& o, const Form& form)
 		<< ", rank to sign : "
 		<< form.getRankToSign()
 		<< ", rank to exec : "
-		<< form.getRankToExec()
-		<< std::endl;
+		<< form.getRankToExec();
 	return (o);
 }
