@@ -6,44 +6,58 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 13:49:59 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/10 14:15:48 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/14 12:11:38 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCALAR_HPP
 # define SCALAR_HPP
 
-#include <iostream>
-#include <iomanip>
-#include <limits.h>
-#include <stdio.h>
-#include <math.h>
+# include <iostream>
+# include <iomanip>
+# include <stdlib.h>
+# include <limits.h>
+# include <limits>
+# include <float.h>
+# include <errno.h>
+# include <sstream>
 
-class Scalar
+
+class Conversion
 {
-	private:
-		double _d;
-		uint64_t _type;
-	public:
-		Scalar (void);
-		Scalar (const Scalar&);
-		Scalar (const std::string);
-		~Scalar (void);
-
-		Scalar& 	operator=(const Scalar&);
-
-		void		print (void);
-
-		void		printChar (void);
-		void		printInt (void);
+	public :
+		Conversion();
+		Conversion(Conversion const & src);
+		Conversion&		operator=(Conversion const & rhs);
+		Conversion(std::string & s_rep);
+		virtual ~Conversion();
+		void			convert_from_char(std::string & s_rep);
+		void			convert_from_int(std::string & s_rep);
+		void			convert_from_float(std::string & s_rep);
+		void			convert_from_double(std::string & s_rep);
 		
+		void			check_overflow(std::string & s_rep);
+		
+		void			print(void) const;
+		void			print_char (void) const;
+		void			print_int (void) const;
+		void			print_float (void) const;
+		void			print_double (void) const;
+
+	private :
+		char		_char;
+		int			_int;
+		float		_float;
+		double		_double;
+		bool		_nan;
+		bool		_minus_inf;
+		bool		_plus_inf;
+		bool		_inf;
+		bool		_error;
+		bool		_char_overflow;
+		bool		_int_overflow;
+		bool		_float_overflow;
 };
 
-
-typedef struct s_type
-{
-	std::string type;
-	uint64_t value;
-}				t_type;
 
 #endif

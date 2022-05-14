@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 13:43:49 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/10 10:59:25 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/14 11:54:41 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,20 @@
 int
 main (int ac, char **av)
 {
+	std::string		str;
+	Conversion		*conv;
+
 	if (ac != 2)
 	{
-		std::cerr << "Invalid number of arguments" << std::endl;
-		return (EXIT_FAILURE);
+		std::cout << "Wrong number of arguments" << std::endl;
+		return (1);
 	}
-	Scalar *scalar = new Scalar(av[1]);
-	if (!scalar)
-		return (EXIT_FAILURE);
-	delete scalar;
-	return (EXIT_SUCCESS);
+
+	str = av[1];
+	conv = new Conversion(str);
+	conv->print();
+
+	delete conv;
+
+	return (0);
 }
