@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 15:56:01 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/04/27 09:33:42 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/16 16:14:52 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ main
 	}
 
 	std::string		filename = av[1];
+	std::string		str_to_find = av[2];
 	std::string		repl_file = filename.append(".replace");
 	std::string		str_to_replace = av[3];
 
@@ -64,7 +65,7 @@ main
 			{
 				ofs << buffer.substr(0, find_res);
 				ofs << str_to_replace;
-				buffer = buffer.substr(find_res + str_to_replace.size());
+				buffer = buffer.substr(find_res + str_to_find.size());
 			}
 		}
 		if (ifs.eof())
