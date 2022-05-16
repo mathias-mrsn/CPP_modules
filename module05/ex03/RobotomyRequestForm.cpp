@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 13:10:05 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/13 11:19:34 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/16 11:35:14 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ RobotomyRequestForm::execute (Bureaucrat const & executor) const
 		throw AForm::GradeTooLowException();
 	else
 	{
+		srand(time(NULL));
 		std::cout << "Grgrgrgrgr ! (drills noises)" << std::endl;
 
 		if (std::rand() % 2 == 0)
