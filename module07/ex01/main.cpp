@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 15:03:47 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/10 15:15:09 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/17 17:21:11 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,10 @@ main (__attribute__((unused)) int ac, __attribute__((unused)) char **av)
 	tab[4] = "cool";
 
 	::iter(tab, static_cast<size_t>(5), &putstr);
+
+	int tab_int[7] = {0, 1, 2, 3, 4, 5, 6};
+
+	::iter(tab_int, static_cast<size_t>(7), &putstr);
+
+	return (0);
 }

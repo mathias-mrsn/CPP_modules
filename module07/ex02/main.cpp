@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 17:21:24 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/10 17:36:21 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/17 17:30:13 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,54 +16,59 @@
 #include <ctime>
 
 
-#define MAX_VAL 750
+#define SIZE 750
 
 int main(int, char**)
 {
-    Array<int> numbers(MAX_VAL);
-    int* mirror = new int[MAX_VAL];
+    Array<int> numbers(SIZE);
+    int* tab = new int[SIZE];
     srand(time(NULL));
-    for (int i = 0; i < MAX_VAL; i++)
+
+    for (int i = 0; i < SIZE; i++)
     {
         const int value = rand();
         numbers[i] = value;
-        mirror[i] = value;
+        tab[i] = value;
     }
-    //SCOPE
+    
+	// try assignment operator test
     {
         Array<int> tmp = numbers;
-        Array<int> test(tmp);
     }
 
-    for (int i = 0; i < MAX_VAL; i++)
+    for (int i = 0; i < SIZE; i++)
     {
-        if (mirror[i] != numbers[i])
-        {
-            std::cerr << "didn't save the same value!!" << std::endl;
-            return 1;
-        }
+        std::cout	<< "Array[" << i << "] is " << numbers[i]
+					<< ", Tab[" << i << "] is " << tab[i] << std::endl;
     }
+	
     try
     {
-        numbers[-2] = 0;
+        numbers[-23] = 0;
     }
     catch(const std::exception& e)
     {
-        std::cerr << e.what() << '\n';
+        std::cerr << e.what() << std::endl;
     }
+	
     try
     {
-        numbers[MAX_VAL] = 0;
+        numbers[SIZE] = 0;
     }
     catch(const std::exception& e)
     {
-        std::cerr << e.what() << '\n';
+        std::cerr << e.what() << std::endl;
     }
 
-    for (int i = 0; i < MAX_VAL; i++)
+	try
     {
-        numbers[i] = rand();
+        numbers[100000] = 0;
     }
-    delete [] mirror;//
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
+
+    delete [] tab;
     return 0;
 }
