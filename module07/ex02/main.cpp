@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 17:21:24 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/17 17:30:13 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/18 10:00:20 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 
 int main(int, char**)
 {
+	Array<int> empty(0);
     Array<int> numbers(SIZE);
     int* tab = new int[SIZE];
     srand(time(NULL));

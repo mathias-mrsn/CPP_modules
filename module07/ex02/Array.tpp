@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 15:35:40 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/10 17:36:31 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/18 10:01:03 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ class Array
 		class ElemOutOfArray : public std::exception
 		{
 			public:
-				virtual const char * what (void) const throw() {return "Element nummber is out of the array";}
+				virtual const char * what (void) const throw() {return "Element number is out of the array";}
 		};
 };
 
