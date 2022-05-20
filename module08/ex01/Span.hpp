@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 14:03:40 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/17 13:38:44 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/19 13:09:12 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,15 @@ class Span
 		int		shortestSpan (void);
 		int		longestSpan (void);
 		void	addRange (Iterator start, Iterator end);
+
+		void	putSpan (void)
+		{
+			std::vector<int>::iterator it = _vector.begin();
+			std::vector<int>::iterator ite = _vector.end();
+
+			while(it != ite)
+				std::cout << *it++ << std::endl;
+		}
 
 		class SpanIsEmpty : public std::exception
 		{

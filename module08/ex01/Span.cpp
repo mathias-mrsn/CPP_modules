@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 14:16:22 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/17 13:39:04 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/19 13:44:36 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Span::Span (void) : _size(0), _vector()
 {
 	
-} 
+}
 
 Span::Span (const Span& ref)
 {
@@ -46,12 +46,9 @@ Span::operator= (const Span& ref)
 void
 Span::addRange (Iterator start, Iterator end)
 {
-	std::vector<int> tempo;
-
 	if (std::distance (start, end) + _vector.size() >= _size)
 		throw Span::CannotAddRange();
-	tempo.assign (start, end);
-	_vector.insert (_vector.end(), tempo.begin(), tempo.end());
+	_vector.insert (_vector.end(), start, end);
 }
 
 void
@@ -65,12 +62,22 @@ Span::addNumber (int n)
 int
 Span::shortestSpan (void)
 {
-	return (*min_element(_vector.begin(), _vector.end()));
+	std::vector<int>::iterator it1 = _vector.begin();
+	std::vector<int>::iterator ite = _vector.end();
+	int min = INT_MAX;
+
+	for(; it1 != ite; it1++)
+	{
+		for (std::vector<int>::iterator it2 = (it1 + 1); it2 != ite; it2++)
+			if (std::abs(*it1 - *it2) < min)
+				min = std::abs(*it1 - *it2);
+	}
+	return min;
 }
 
 int
 Span::longestSpan (void)
 {
-	return (*max_element(_vector.begin(), _vector.end()));
+	return (*max_element(_vector.begin(), _vector.end()) - *min_element(_vector.begin(), _vector.end()));
 }
 

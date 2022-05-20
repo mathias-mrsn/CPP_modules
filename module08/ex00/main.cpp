@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 17:48:03 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/10 17:53:19 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/19 12:59:34 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ main (__attribute__((unused)) int ac, __attribute__((unused)) char **av)
 	try
 	{
 		easyfind(lst, 521);
-		std::cout << "The value has been found !" << std::endl;
+		std::cout << "the value has been found" << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -37,7 +37,7 @@ main (__attribute__((unused)) int ac, __attribute__((unused)) char **av)
 	try
 	{
 		easyfind(lst, 0);
-		std::cout << "The value has been found !" << std::endl;
+		std::cout << "the value has been found" << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -47,7 +47,7 @@ main (__attribute__((unused)) int ac, __attribute__((unused)) char **av)
 		try
 	{
 		easyfind(lst, 12);
-		std::cout << "The value has been found !" << std::endl;
+		std::cout << "the value has been found" << std::endl;
 	}
 	catch(const std::exception& e)
 	{
