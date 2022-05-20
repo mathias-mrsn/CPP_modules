@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:07:28 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/14 12:11:30 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/20 12:12:26 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ Conversion::Conversion() : _char('0'), _int(0), _float(0),
 			_inf(false), _error(false), _char_overflow(false),
 			_int_overflow(false), _float_overflow(false)
 {
+	
 }
 
 Conversion::~Conversion()
@@ -123,13 +124,13 @@ Conversion::Conversion(std::string & str) : _nan(false),
 	else if (str.compare("nanf") == 0 || str.compare("nan") == 0)
 		this->_nan = true;
 	else if (is_int(str))
-		this->convert_from_int(str);
+		this->convert_int(str);
 	else if (is_char(str))
-		this->convert_from_char(str);
+		this->convert_char(str);
 	else if (is_float(str))
-		this->convert_from_float(str);
+		this->convert_float(str);
 	else if (is_double(str))
-		this->convert_from_double(str);
+		this->convert_double(str);
 	else
 		this->_error = true;
 }
@@ -150,7 +151,7 @@ void			Conversion::check_overflow(std::string & str)
 	}
 }
 
-void			Conversion::convert_from_char(std::string & str)
+void			Conversion::convert_char(std::string & str)
 {
 	this->check_overflow(str);
 	this->_char = str[0];
@@ -159,7 +160,7 @@ void			Conversion::convert_from_char(std::string & str)
 	this->_float = static_cast<float>(this->_char);
 }
 
-void			Conversion::convert_from_int(std::string & str)
+void			Conversion::convert_int(std::string & str)
 {
 	long int		nb;
 
@@ -176,7 +177,7 @@ void			Conversion::convert_from_int(std::string & str)
 	}
 }
 
-void			Conversion::convert_from_float(std::string & str)
+void			Conversion::convert_float(std::string & str)
 {
 	this->check_overflow(str);
 	this->_float = strtof(str.c_str(), NULL);
@@ -190,7 +191,7 @@ void			Conversion::convert_from_float(std::string & str)
 	}
 }
 
-void			Conversion::convert_from_double(std::string & str)
+void			Conversion::convert_double(std::string & str)
 {
 	this->check_overflow(str);
 	this->_double = strtod(str.c_str(), NULL);
@@ -269,5 +270,4 @@ Conversion::print (void) const
 	this->print_float();
 	std::cout << "double: ";
 	this->print_double();
-	
 }

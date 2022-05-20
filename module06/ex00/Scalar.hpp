@@ -6,7 +6,7 @@
 /*   By: mamaurai <mamaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 13:49:59 by mamaurai          #+#    #+#             */
-/*   Updated: 2022/05/14 12:11:38 by mamaurai         ###   ########.fr       */
+/*   Updated: 2022/05/20 12:12:11 by mamaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,11 @@ class Conversion
 		Conversion&		operator=(Conversion const & rhs);
 		Conversion(std::string & s_rep);
 		virtual ~Conversion();
-		void			convert_from_char(std::string & s_rep);
-		void			convert_from_int(std::string & s_rep);
-		void			convert_from_float(std::string & s_rep);
-		void			convert_from_double(std::string & s_rep);
+
+		void			convert_char(std::string & s_rep);
+		void			convert_int(std::string & s_rep);
+		void			convert_float(std::string & s_rep);
+		void			convert_double(std::string & s_rep);
 		
 		void			check_overflow(std::string & s_rep);
 		
